@@ -1,0 +1,7 @@
+dependencies:
+- host: github.com
+  owner: ld-bot
+  repo: go-test-2
+  url: https://github.com/ld-bot/go-test-2.git
+  version: ""
+  versionURL: ""
