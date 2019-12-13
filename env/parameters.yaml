@@ -1,0 +1,10 @@
+adminUser:
+  password: vault:ultimate-cluster/adminUser:password
+  username: logan
+enableDocker: false
+pipelineUser:
+  email: ldonley+github@cloudbees.com
+  token: vault:ultimate-cluster/pipelineUser:token
+  username: ld-bot
+prow:
+  hmacToken: vault:ultimate-cluster/prow:hmacToken

@@ -1,39 +1,78 @@
 autoUpdate:
   enabled: false
   schedule: ""
+bootConfigURL: https://github.com/cloudbees/cloudbees-jenkins-x-boot-config.git
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  environmentGitPublic: true
-  project: ""
   azure: {}
+  clusterName: ultimate-cluster
+  environmentGitOwner: ldon-dev-org
+  environmentGitPublic: true
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  project: ldonley
   provider: gke
-  zone: ""
-gitops: true
+  registry: gcr.io
+  zone: us-central1-b
 environments:
-  - key: dev
-  - key: staging
-  - key: production
+- ingress:
+    cloud_dns_secret_name: external-dns-gcp-sa
+    domain: ultimate-cluster.donley.cloud
+    externalDNS: true
+    namespaceSubDomain: -jx.
+    tls:
+      email: ldonley@cloudbees.com
+      enabled: true
+      production: true
+  key: dev
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: staging
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: production
+gitops: true
 ingress:
-  domain: ""
-  externalDNS: false
+  cloud_dns_secret_name: external-dns-gcp-sa
+  domain: ultimate-cluster.donley.cloud
+  externalDNS: true
+  namespaceSubDomain: -jx.
   tls:
-    email: ""
-    enabled: false
-    production: false
+    email: ldonley@cloudbees.com
+    enabled: true
+    production: true
 kaniko: true
+repository: nexus
 secretStorage: vault
 storage:
+  backup:
+    enabled: false
+    url: ""
   logs:
     enabled: true
-    url: ""
+    url: gs://ultimate-cluster-logs-bb116112-2569-4e65-be35-9fa1f227d
   reports:
     enabled: true
-    url: ""
+    url: gs://ultimate-cluster-reports-d0f31104-8041-4d3c-9f83-2dc6dd
   repository:
     enabled: true
-    url: ""
+    url: gs://ultimate-cluster-repository-3cb412fe-6e04-45b9-99f7-12b
+vault: {}
+velero: {}
 versionStream:
-  ref: 2.0.1005+cjxd.5
+  ref: v0.0.16
   url: https://github.com/cloudbees/cloudbees-jenkins-x-versions.git
 webhook: prow
