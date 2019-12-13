@@ -5,3 +5,9 @@ dependencies:
   url: https://github.com/ld-bot/go-test-2.git
   version: ""
   versionURL: ""
+- host: github.com
+  owner: ld-bot
+  repo: test-ui-react
+  url: https://github.com/ld-bot/test-ui-react.git
+  version: ""
+  versionURL: ""
