@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: ld-bot
+    provider: github
+    repository: shopping-cart-rails-example
+  name: ld-bot-shopping-cart-rails-example
+spec:
+  description: Imported application for ld-bot/shopping-cart-rails-example
+  httpCloneURL: https://github.com/ld-bot/shopping-cart-rails-example.git
+  org: ld-bot
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: shopping-cart-rails-example
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/ld-bot/shopping-cart-rails-example.git
