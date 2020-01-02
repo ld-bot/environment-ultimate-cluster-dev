@@ -19,7 +19,7 @@ dependencies:
   versionURL: ""
 - host: github.com
   owner: ld-bot
-  repo: golang-example-http
-  url: https://github.com/ld-bot/golang-example-http.git
+  repo: ld-go-example
+  url: https://github.com/ld-bot/ld-go-example.git
   version: ""
   versionURL: ""

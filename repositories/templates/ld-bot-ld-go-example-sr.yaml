@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: ld-bot
+    provider: github
+    repository: ld-go-example
+  name: ld-bot-ld-go-example
+spec:
+  description: Imported application for ld-bot/ld-go-example
+  httpCloneURL: https://github.com/ld-bot/ld-go-example.git
+  org: ld-bot
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: ld-go-example
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/ld-bot/ld-go-example.git
