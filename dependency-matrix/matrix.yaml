@@ -17,3 +17,9 @@ dependencies:
   url: https://github.com/ld-bot/shopping-cart-rails-example.git
   version: ""
   versionURL: ""
+- host: github.com
+  owner: ld-bot
+  repo: golang-example-http
+  url: https://github.com/ld-bot/golang-example-http.git
+  version: ""
+  versionURL: ""
