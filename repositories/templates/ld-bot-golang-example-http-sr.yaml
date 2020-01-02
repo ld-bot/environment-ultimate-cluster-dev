@@ -1,0 +1,17 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  name: ld-bot-golang-example-http
+spec:
+  description: Imported application for ld-bot/golang-example-http
+  httpCloneURL: https://github.com/ld-bot/golang-example-http.git
+  org: ld-bot
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: golang-example-http
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/ld-bot/golang-example-http.git
