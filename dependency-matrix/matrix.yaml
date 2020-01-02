@@ -23,3 +23,9 @@ dependencies:
   url: https://github.com/ld-bot/ld-go-example.git
   version: ""
   versionURL: ""
+- host: github.com
+  owner: ld-bot
+  repo: go-test-app
+  url: https://github.com/ld-bot/go-test-app.git
+  version: ""
+  versionURL: ""
